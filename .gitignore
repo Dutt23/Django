@@ -1,7 +1,8 @@
 
 # Created by https://www.gitignore.io/api/django
 # Edit at https://www.gitignore.io/?templates=django
-# Virtual environment
+# Local files
+vscode
 venv
 ### Django ###
 *.log
