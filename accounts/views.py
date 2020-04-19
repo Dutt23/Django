@@ -1,10 +1,20 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 
 def register(request):
-  return render(request, 'accounts/register.html')
+	if request.method == 'POST':
+		#Register user
+		messages.error(request, 'Testing message tags')
+		return redirect('register')
+	else:
+		return render(request, 'accounts/register.html')
 
 def login(request):
-  return render(request, 'accounts/login.html')
+	if request.method == 'POST':
+		#Login user
+		return 
+	else:
+		return render(request, 'accounts/login.html')
 
 def logout(request):
   return redirect('index')
