@@ -29,14 +29,14 @@ def contact(request):
                         email=email, phone=phone, message=message, user_id=user_id)
       contact.save()
 
-      send_mail(
-        'Property listing inquiry',
-        'There has been an inquiry for ' + listing + '. Sign into the admin panel for more info',
-        # Enter the master email here for sending \
-        '',
-        [realtor_email],
-        fail_silently=False
-      )
+      # send_mail(
+      #   'Property listing inquiry',
+      #   'There has been an inquiry for ' + listing + '. Sign into the admin panel for more info',
+      #   # Enter the master email here for sending \
+      #   '',
+      #   [realtor_email],
+      #   fail_silently=False
+      # )
       messages.success(
           request, "Your request has been submitted, a realtor will get back to you shortly")
   return redirect('/listings/'+listing_id)
